@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan - Sistem Informasi</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',
+                        'primary-dark': '#1e293b',
+                        accent: '#f59e0b',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-gray-50 min-h-screen font-sans">
+
+    <header class="bg-primary text-white shadow-lg sticky top-0 z-30">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center font-bold text-lg">
+                    📚
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold leading-tight">Perpustakaan</h1>
+                    <p class="text-xs text-blue-200">Sistem Informasi</p>
+                </div>
+            </div>
+            <nav class="flex gap-1 md:gap-2">
+                <a href="#dashboard" class="nav-link px-3 md:px-4 py-2 rounded-lg hover:bg-blue-700 font-medium text-sm transition">Dashboard</a>
+                <a href="#books" class="nav-link px-3 md:px-4 py-2 rounded-lg hover:bg-blue-700 font-medium text-sm transition">Buku</a>
+                <a href="#categories" class="nav-link px-3 md:px-4 py-2 rounded-lg hover:bg-blue-700 font-medium text-sm transition">Kategori</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="app" class="container mx-auto px-4 py-8">
+        <div class="text-center py-16 text-gray-400">Memuat aplikasi...</div>
+    </main>
+
+    <div id="toast-container" class="fixed top-4 right-4 z-50 space-y-2"></div>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
